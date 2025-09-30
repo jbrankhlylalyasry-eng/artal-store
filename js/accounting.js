@@ -1,4 +1,3 @@
-console.log('Accounting JS loaded');
 // إدارة دفتر الحسابات
 document.addEventListener('DOMContentLoaded', function() {
     initializeAccountingNavigation();
@@ -63,7 +62,7 @@ function initializeEventListeners() {
             e.preventDefault();
             
             const type = document.getElementById('transactionType').value;
-            const amount = parseFloat(document.getElementById('transactionAmount').value;
+            const amount = parseFloat(document.getElementById('transactionAmount').value);
             const date = document.getElementById('transactionDate').value;
             const category = document.getElementById('transactionCategory').value;
             const description = document.getElementById('transactionDescription').value;
@@ -846,4 +845,4 @@ function getPaymentMethodText(method) {
     };
     
     return methods[method] || method;
-}
+        }
