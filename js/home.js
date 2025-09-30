@@ -1,5 +1,4 @@
 // تهيئة الصفحة الرئيسية
-// تهيئة الصفحة الرئيسية
 document.addEventListener('DOMContentLoaded', function() {
     loadProducts();
     initializeProductFilter();
