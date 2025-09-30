@@ -1,4 +1,3 @@
-console.log('Admin JS loaded');
 // إدارة لوحة التحكم
 document.addEventListener('DOMContentLoaded', function() {
     initializeAdminNavigation();
@@ -35,16 +34,21 @@ function loadDashboardData() {
     const transactions = TransactionManager.getAll();
     
     // تحديث العدادات
-    document.getElementById('productsCount').textContent = products.length;
-    document.getElementById('ordersCount').textContent = '24'; // بيانات افتراضية
-    document.getElementById('customersCount').textContent = '156'; // بيانات افتراضية
+    const productsCount = document.getElementById('productsCount');
+    const ordersCount = document.getElementById('ordersCount');
+    const customersCount = document.getElementById('customersCount');
+    const revenueCount = document.getElementById('revenueCount');
+    
+    if (productsCount) productsCount.textContent = products.length;
+    if (ordersCount) ordersCount.textContent = '24'; // بيانات افتراضية
+    if (customersCount) customersCount.textContent = '156'; // بيانات افتراضية
     
     // حساب الإيرادات من الحركات المالية
     const revenue = transactions
         .filter(t => t.type === 'income')
         .reduce((sum, t) => sum + t.amount, 0);
     
-    document.getElementById('revenueCount').textContent = Helper.formatCurrency(revenue);
+    if (revenueCount) revenueCount.textContent = Helper.formatCurrency(revenue);
     
     // تحميل التنبيهات
     loadAlerts();
@@ -57,6 +61,8 @@ function loadDashboardData() {
 function loadAlerts() {
     const alertList = document.getElementById('alertList');
     const products = ProductManager.getAll();
+    
+    if (!alertList) return;
     
     // تنظيف القائمة
     alertList.innerHTML = '';
@@ -162,6 +168,8 @@ function loadCharts() {
 function loadProducts() {
     const productsList = document.getElementById('productsList');
     const products = ProductManager.getAll();
+    
+    if (!productsList) return;
     
     productsList.innerHTML = '';
     
