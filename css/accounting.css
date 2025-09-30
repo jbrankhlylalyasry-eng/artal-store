@@ -1,4 +1,3 @@
-body { background: #efe; }
 /* Accounting Styles */
 
 /* Tabs */
@@ -148,6 +147,20 @@ body { background: #efe; }
     gap: 20px;
 }
 
+.chart-container {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 25px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    height: 400px;
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
 /* Reports Cards */
 .reports-cards {
     display: grid;
@@ -200,6 +213,21 @@ body { background: #efe; }
 .category-item .category-actions {
     display: flex;
     gap: 5px;
+}
+
+/* Sections */
+.section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Responsive */
