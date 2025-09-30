@@ -55,7 +55,7 @@
 }
 
 .feature i {
-    color: var(--accent-color);
+    color: var(--primary);
     margin-left: 10px;
     font-size: 1.2rem;
     margin-top: 5px;
@@ -171,7 +171,7 @@
 
 .service-icon {
     font-size: 2.5rem;
-    color: var(--accent-color);
+    color: var(--primary);
     margin-bottom: 20px;
 }
 
@@ -196,7 +196,7 @@
 .testimonial {
     padding: 30px;
     text-align: center;
-    background-color: var(--light-color);
+    background-color: var(--accent);
     border-radius: 8px;
     display: none;
 }
@@ -279,7 +279,7 @@
 }
 
 .contact-item i {
-    color: var(--accent-color);
+    color: var(--primary);
     margin-left: 10px;
     font-size: 1.2rem;
 }
@@ -302,7 +302,7 @@
 }
 
 .social-link:hover {
-    background-color: var(--secondary);
+    background-color: var(--primary-light);
     transform: translateY(-3px);
 }
 
@@ -341,7 +341,7 @@ footer {
     left: 0;
     width: 50px;
     height: 2px;
-    background-color: var(--accent-color);
+    background-color: var(--primary);
 }
 
 .footer-links li {
@@ -353,7 +353,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: var(--accent-color);
+    color: var(--primary);
     padding-right: 5px;
 }
 
@@ -377,10 +377,6 @@ footer {
 @media (max-width: 768px) {
     .hero h2 {
         font-size: 2.5rem;
-    }
-    
-    .section-title h2 {
-        font-size: 2rem;
     }
     
     .about-features {
