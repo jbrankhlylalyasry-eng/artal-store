@@ -1,4 +1,3 @@
-console.log('Main JS loaded');
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
     const mobileToggle = document.querySelector('.mobile-toggle');
